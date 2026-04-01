@@ -3,7 +3,7 @@
 **/target/
 
 # Cargo lock (keep for binaries, ignore for libraries)
-Cargo.lock  # uncomment if this is a library crate
+Cargo.lock
 
 # Environment & secrets
 .env
