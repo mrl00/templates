@@ -30,13 +30,13 @@ cargo install cargo-generate
 Generate a new project from a template:
 
 ```bash
-cargo generate https://github.com/your-username/templates --name my-project
+cargo generate https://github.com/mrl00/templates --name my-project
 ```
 
 Or specify a template directly:
 
 ```bash
-cargo generate https://github.com/your-username/templates hexagonal_arch --name my-project
+cargo generate https://github.com/mrl00/templates hexagonal_arch --name my-project
 ```
 
 ## License
