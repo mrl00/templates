@@ -6,17 +6,47 @@ A collection of project templates for [cargo-generate](https://github.com/cargo-
 
 ### hexagonal_arch
 
-A hexagonal architecture (ports and adapters) template for Rust projects.
+A full hexagonal architecture (ports and adapters) template for Rust library projects.
 
 ```
 src/
 ├── adapters/
 │   ├── driven/      # Outgoing adapters (repositories, external services)
 │   └── driving/     # Incoming adapters (controllers, handlers)
-├── application/     # Application services / use cases
+├── application/
+│   ├── services/    # Application services
+│   └── use_cases/   # Use case implementations
 └── domain/
-    ├── model.rs     # Domain models
-    └── ports.rs     # Port interfaces (traits)
+    ├── aggregates/  # Domain aggregates
+    ├── models/      # Domain models
+    ├── ports/       # Port interfaces (traits)
+    └── value_objects/ # Value objects
+```
+
+### hexagonal_arch_simple_lib
+
+A simplified hexagonal architecture template for Rust library projects.
+
+```
+src/
+├── adapters/
+│   ├── drive/       # Driven adapters (outgoing)
+│   └── driving/     # Driving adapters (incoming)
+├── application/     # Application layer
+└── domain/          # Domain layer
+```
+
+### hexagonal_arch_simple_bin
+
+A simplified hexagonal architecture template for Rust binary projects.
+
+```
+src/
+├── adpters/
+│   ├── driven/      # Outgoing adapters
+│   └── driving/     # Incoming adapters
+├── application/     # Application layer
+└── domain/          # Domain layer
 ```
 
 ## Usage
