@@ -74,6 +74,31 @@ src/
     └── web/                   # Web UI templates/SSR
 ```
 
+### clean_arch_bin
+
+A clean architecture template for Rust binary projects, following dependency rule with clear layer separation.
+
+```
+src/
+├── domain/                    # Enterprise business rules
+│   ├── entities/              # Core business objects
+│   ├── value_objects/         # Immutable domain value types
+│   ├── events/                # Domain events
+│   └── repositories/          # Repository interfaces (traits)
+├── application/               # Application business rules
+│   ├── use_cases/             # Use case interactors
+│   ├── services/              # Application services
+│   └── dtos/                  # Data transfer objects
+├── infrastructure/            # External concerns
+│   ├── persistence/           # Database implementations
+│   ├── external_services/     # Third-party service integrations
+│   └── messaging/             # Message queue/event bus
+└── presentation/              # Interface adapters
+    ├── api/                   # REST/GraphQL API handlers
+    ├── cli/                   # Command-line interface
+    └── web/                   # Web UI templates/SSR
+```
+
 ## Usage
 
 Install cargo-generate:
