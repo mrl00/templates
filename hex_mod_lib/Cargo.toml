@@ -4,4 +4,7 @@ version = "0.1.0"
 edition = "2024"
 license = "MIT"
 
+[workspace]
+members = ["api", "application", "domain", "infrastructure"]
+
 [dependencies]
